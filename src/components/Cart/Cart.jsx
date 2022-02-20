@@ -28,7 +28,7 @@ const Cart = (props) => {
   const submitOrderHandler = async (userData) => {
     sendOrder(
       {
-        url: "https://react-practice-793ad-default-rtdb.firebaseio.com/orders.json",
+        url: process.env.REACT_APP_BACKEND_URL + "/orders.json",
         method: "POST",
         body: {
           user: userData,
